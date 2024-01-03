@@ -1,0 +1,34 @@
+/* Override Bootstrap styles for the navbar */
+.navbar {
+    background-color: #B15EFF; /* Set the background color of the navbar */
+}
+
+/* Define the initial background color for navigation links */
+.navbar-nav .nav-item .nav-link {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+/* Change the background color on hover for navigation links */
+.navbar-nav .nav-item:hover .nav-link {
+    background-color: #FFA33C; 
+    text-decoration: underline;
+}
+
+.nav-link {
+    border-radius: 3px;
+}
+
+.nav-item {   
+    font-weight:500;
+}
+
+.navbar-brand, li{
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+.title {
+    margin: 10px;
+    font-size: 30px;
+    text-align: center;
+}
