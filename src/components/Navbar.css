@@ -1,6 +1,6 @@
 /* Override Bootstrap styles for the navbar */
 .navbar {
-    background-color: #B15EFF; /* Set the background color of the navbar */
+    background-color: transparent; /* Set the background color of the navbar */
 }
 
 /* Define the initial background color for navigation links */
@@ -11,7 +11,6 @@
 
 /* Change the background color on hover for navigation links */
 .navbar-nav .nav-item:hover .nav-link {
-    background-color: #FFA33C; 
     text-decoration: underline;
 }
 
@@ -20,15 +19,20 @@
 }
 
 .nav-item {   
-    font-weight:500;
+    font-size: 20px;
 }
 
-.navbar-brand, li{
-    font-family: 'Press Start 2P', sans-serif;
+.custom-font, li{
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 .title {
     margin: 10px;
     font-size: 30px;
     text-align: center;
+}
+
+.navbar-brand {
+    font-size: 25px;
+    padding-bottom: 0px;
 }

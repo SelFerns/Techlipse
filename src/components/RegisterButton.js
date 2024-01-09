@@ -10,7 +10,7 @@ export default function RegisterBtn() {
   };
 
   return (
-    <button className="Btn btn-text" onClick={handleClick}>
+    <button className="Btn btn-text custom-font" onClick={handleClick}>
       REGISTER
     </button>
   );

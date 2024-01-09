@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,12 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.custom-font {
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+.nav-font{
+  font-family: 'Chakra Petch', sans-serif;
 }

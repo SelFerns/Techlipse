@@ -10,7 +10,7 @@ export default function EventCard({ event }) {
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">
-                        <h5 className="card-title">{event.title}</h5>
+                        <h5 className="card-title custom-font">{event.title}</h5>
                         <p className="card-text">{event.description}</p>
                     </div>
                 </div>
