@@ -1,5 +1,5 @@
 import EventCard from "../components/EventCard";
-
+import RegisterBtn from "../components/RegisterButton";
 
 export default function Home() {
     const eventsData = [
@@ -29,9 +29,8 @@ export default function Home() {
     return (
         <>
             <h1 style={{ textAlign: "center", marginTop: "30px" }}>EVENTS</h1>
-            {eventsData.map((event) => (
-                <EventCard key={event.id} event={event} />
-            ))}
+            {eventsData.map((event) => (<EventCard key={event.id} event={event} />))}
+            <RegisterBtn />
         </>
     );
 }

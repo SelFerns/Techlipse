@@ -1,5 +1,6 @@
 import React from "react";
 import "./EventCard.css"
+
 export default function EventCard({ event }) {
     return (
         <div className="card mb-3 card-width">
@@ -11,7 +12,6 @@ export default function EventCard({ event }) {
                     <div className="card-body">
                         <h5 className="card-title">{event.title}</h5>
                         <p className="card-text">{event.description}</p>
-                        {/* Add any other content */}
                     </div>
                 </div>
             </div>
