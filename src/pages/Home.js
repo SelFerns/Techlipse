@@ -1,37 +1,25 @@
 import EventCard from "../components/EventCard";
 import RegisterBtn from "../components/RegisterButton";
-import "./Home.css"
+import axiosInstance from "../axios";
+import { useEffect,useState } from "react";
+import "./Home.css";
 
 export default function Home() {
-    const eventsData = [
-        {
-            id: 1,
-            title: "Event 1",
-            description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus accusantium debitis at laudantium omnis odit repellendus dolorum itaque totam aspernatur quas ad modi, provident laborum sapiente fuga sed nam incidunt voluptatibus error ab dolor?",
-            imgURL: "/images/code.jpg",
-        },
+  const [eventsData, updateEvent] = useState([]);
 
-        {
-            id: 2,
-            title: "Event 2",
-            description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus accusantium debitis at laudantium omnis odit repellendus dolorum itaque totam aspernatur quas ad modi, provident laborum sapiente fuga sed nam incidunt voluptatibus error ab dolor?",
-            imgURL: "/images/treasure.jpg",
-
-        },
-
-        {
-            id: 3,
-            title: "Event 3",
-            description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus accusantium debitis at laudantium omnis odit repellendus dolorum itaque totam aspernatur quas ad modi, provident laborum sapiente fuga sed nam incidunt voluptatibus error ab dolor?",
-            imgURL: "/images/gaming.jpg",
-
-        },
-    ];
-    return (
-        <>
-            <h1 className="custom-font title">EVENTS</h1>
-            {eventsData.map((event) => (<EventCard key={event.id} event={event} />))}
-            <RegisterBtn />
-        </>
-    );
+  useEffect(() => {
+    axiosInstance.get("events/event/1/").then((res) => {
+      updateEvent(res.data.sub_event);
+      console.log(eventsData);
+    });
+  }, []);
+  return (
+    <>
+      <h1 className="custom-font title">EVENTS</h1>
+      {eventsData.map((event) => (
+        <EventCard key={event.id} event={event} />
+      ))}
+      <RegisterBtn />
+    </>
+  );
 }
